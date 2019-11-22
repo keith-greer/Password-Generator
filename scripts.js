@@ -1,0 +1,29 @@
+body {
+    background:#ccc
+  }
+  #theButton {
+    margin:40px auto;
+    display:block;
+    height:70px;
+    font-size:20px;
+    border:0;
+     background: rgba(0, 0, 0, 0) linear-gradient(135deg, #f05327 0%, #f17d24 100%) repeat scroll 0 0;
+    color:#fff;
+    padding:5px 20px;
+    border-bottom:4px solid #f05327;
+    box-shadow:0px 3px 10px #000;
+  }
+  #theButton:hover{
+    border-bottom:none;
+    cursor:pointer;
+    box-shadow:0px 2px 4px #000;
+  }
+  div {
+    text-align:center;
+    font-family:'Arial', sans-serif;
+    font-size:25px
+  }
+  .adj,
+  .noun{
+    text-transform:capitalize;
+  }

@@ -1,29 +1,149 @@
-body {
-    background:#ccc
-  }
-  #theButton {
-    margin:40px auto;
-    display:block;
-    height:70px;
-    font-size:20px;
-    border:0;
-     background: rgba(0, 0, 0, 0) linear-gradient(135deg, #f05327 0%, #f17d24 100%) repeat scroll 0 0;
-    color:#fff;
-    padding:5px 20px;
-    border-bottom:4px solid #f05327;
-    box-shadow:0px 3px 10px #000;
-  }
-  #theButton:hover{
-    border-bottom:none;
-    cursor:pointer;
-    box-shadow:0px 2px 4px #000;
-  }
-  div {
-    text-align:center;
-    font-family:'Arial', sans-serif;
-    font-size:25px
-  }
-  .adj,
-  .noun{
-    text-transform:capitalize;
-  }
+var adj = [
+    'bitter',
+   'delicious',
+   'fresh',
+   'greasy',
+   'juicy',
+   'hot',
+   'icy',
+   'loose',
+   'melted',
+   'nutritious',
+   'prickly',
+   'rainy',
+   'rotten',
+   'salty',
+   'sticky',
+   'strong',
+   'sweet',
+   'tart',
+   'tasteless',
+   'uneven',
+   'weak',
+   'wet',
+   'wooden',
+   'yummy',
+   'broad',
+   'chubby',
+   'crooked',
+   'curved',
+   'deep',
+   'flat',
+   'high',
+   'hollow',
+   'low',
+   'narrow',
+   'round',
+   'shallow',
+   'skinny',
+   'square',
+   'steep',
+   'straight',
+   'wide'
+   ];
+   
+   var noun = [
+   'alarm',
+   'animal',
+   'aunt',
+   'bait',
+   'balloon',
+   'bath',
+   'bead',
+   'beam',
+   'bean',
+   'bedroom',
+   'boot',
+   'bread',
+   'brick',
+   'brother',
+   'camp',
+   'chicken',
+   'children',
+   'crook',
+   'deer',
+   'dock',
+   'doctor',
+   'downtown',
+   'drum',
+   'dust',
+   'eye',
+   'family',
+   'father',
+   'fight',
+   'flesh',
+   'food',
+   'frog',
+   'goose',
+   'grade',
+   'grandfather',
+   'grandmother',
+   'grape',
+   'grass',
+   'hook',
+   'horse',
+   'jail',
+   'jam',
+   'kiss',
+   'kitten',
+   'light',
+   'loaf',
+   'lock',
+   'lunch',
+   'lunchroom',
+   'meal',
+   'mother',
+   'notebook',
+   'owl',
+   'pail',
+   'parent',
+   'park',
+   'plot',
+   'rabbit',
+   'rake',
+   'robin',
+   'sack',
+   'sail',
+   'scale',
+   'sea',
+   'sister',
+   'soap',
+   'song',
+   'spark',
+   'space',
+   'spoon',
+   'spot',
+   'spy',
+   'summer',
+   'tiger',
+   'toad',
+   'town',
+   'trail',
+   'tramp',
+   'tray',
+   'trick',
+   'trip',
+   'uncle',
+   'vase',
+   'winter',
+   'water',
+   'week',
+   'wheel',
+   'wish',
+   'wool',
+   'yard',
+   'zebra'
+   ]
+   
+   var getAdjective = function() {
+     return adj[Math.floor(Math.random() * adj.length)];
+   };
+   var getNoun = function() {
+     return noun[Math.floor(Math.random() * noun.length)];
+   };
+   
+   $('#theButton').click(function() {
+     $('.adj').html(getAdjective());
+     $('.noun').html(getNoun());
+   });
+   
